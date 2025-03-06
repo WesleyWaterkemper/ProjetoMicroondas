@@ -1,0 +1,17 @@
+C:\ProjetoCSharp\Microondas\Microondas\bin\Debug\Microondas.exe.config
+C:\ProjetoCSharp\Microondas\Microondas\bin\Debug\Microondas.exe
+C:\ProjetoCSharp\Microondas\Microondas\bin\Debug\Microondas.pdb
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\Microondas.csproj.AssemblyReference.cache
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\MainWindow.g.cs
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\App.g.cs
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\Microondas_MarkupCompile.cache
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\Microondas_MarkupCompile.lref
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\MainWindow.baml
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\Microondas.g.resources
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\Microondas.Properties.Resources.resources
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\Microondas.csproj.GenerateResource.cache
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\Microondas.csproj.CoreCompileInputs.cache
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\Microondas.exe
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\Microondas.pdb
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\CadastrarProgramas.g.cs
+C:\ProjetoCSharp\Microondas\Microondas\obj\Debug\CadastrarProgramas.baml

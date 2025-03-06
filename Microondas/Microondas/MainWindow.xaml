@@ -1,0 +1,94 @@
+﻿<Window x:Class="Microondas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Microondas" 
+		xmlns:aplicacao="clr-namespace:Microondas.Aplicacao" 
+		d:DataContext="{d:DesignInstance Type=aplicacao:AquecimentoPreDefinido}"
+		mc:Ignorable="d"
+		Title="MainWindow" Height="450" Width="800"
+		Background="DarkCyan">
+
+	<Grid>
+		<Label Content="Tempo (segundos)" 
+			   HorizontalAlignment="Left" VerticalAlignment="Top" 
+			   Margin="30,12,0,0" Height="24"/>
+		<TextBox x:Name="txtTempo"
+				 Text="{Binding ElementName=cmbOpcoesPreDefinidas, Path=SelectedValue.Tempo}"
+                 HorizontalAlignment="Left" VerticalAlignment="Top" 
+				 Margin="140,11,0,0" Width="120" Height="24"/>
+
+
+		<Label Content="Potência (1-10)" 
+			   HorizontalAlignment="Left" VerticalAlignment="Top" 
+			   Margin="30,52,0,0" Height="24"/>
+		<TextBox x:Name="txtPotencia"
+				 Text="{Binding ElementName=cmbOpcoesPreDefinidas, Path=SelectedValue.Potencia}"
+                 HorizontalAlignment="Left" VerticalAlignment="Top" 
+				 Margin="140,52,0,0" Width="120" Height="24"/>
+
+
+		<Button Content="Iniciar" 
+				HorizontalAlignment="Left" VerticalAlignment="Top" 
+				Width="100" Height="30" Margin="30,100,0,0" 
+				Click="ButtonIniciar_Click"/>
+		<Button Content="Pausar/Cancelar" 
+				HorizontalAlignment="Left" VerticalAlignment="Top" 
+				Width="100" Height="30" Margin="160,100,0,0" 
+				Click="ButtonPausarCancelarAquecimento_Click"/>
+
+
+		<Label Content="Aquecimentos Pre Definidos:"
+			   HorizontalAlignment="Left" VerticalAlignment="Top"
+			   Margin="270,10,0,0"/>
+		<ComboBox
+			ItemsSource="{Binding Path=OpcaoDeAquecimentoPreDefinido}" DisplayMemberPath="NomePrograma"
+			Name="cmbOpcoesPreDefinidas"
+			HorizontalAlignment="Left" VerticalAlignment="Top"
+			Margin="432,10,0,0" Width="148" Height="26" 
+			SelectionChanged="CmbOpcoesPreDefinidas_SelectionChanged">
+		</ComboBox>
+
+		<Button Content="+"
+				HorizontalAlignment="Left" VerticalAlignment="Top"
+				Margin="585,10,0,0" Width="26" Height="26" Click="Button_Click" />
+
+
+
+		<Label Content="Caracter:"
+			   HorizontalAlignment="Left" VerticalAlignment="Top"
+			   Margin="609,10,0,0" Width="56" Height="24" />
+		<TextBox Name="txtCaracter"
+				 Text="{Binding ElementName=cmbOpcoesPreDefinidas, Path=SelectedValue.CaracterAquecimento}"
+				 HorizontalAlignment="Left" VerticalAlignment="Top"
+				 Margin="670,10,0,0" Width="85" Height="24"
+				 IsReadOnly="true"/>
+
+
+		<Label Content="Instruções:"
+			   HorizontalAlignment="Left" VerticalAlignment="Top" 
+			   Margin="270,52,0,0"
+			   Height="24" RenderTransformOrigin="0.525,1.377"/>
+		<TextBox
+			Name="txtInstrucoes"
+			Text="{Binding ElementName=cmbOpcoesPreDefinidas, Path=SelectedValue.Instrucoes}"
+			HorizontalAlignment="Left" VerticalAlignment="Top"
+			Margin="337,52,0,0" Height="78" Width="418"
+			TextWrapping="Wrap"
+			IsReadOnly="true"/>
+
+
+		<Label
+
+			Margin="30,167,30,17" Height="250"
+			Background="White">
+			<TextBlock 
+				Name="statusAquecimento"
+				HorizontalAlignment="Center" VerticalAlignment="Top" 
+				Background="White"
+				TextWrapping="Wrap">
+			</TextBlock>
+		</Label>
+	</Grid>
+</Window>
